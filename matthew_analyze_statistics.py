@@ -71,7 +71,7 @@ def highest_lowest(arr, n,averaged = False):
 		return indices_highest, indices_lowest
 
 def get_graphs():
-	names=  ["Uncertainty", "Killer Moves", "Permenance", "Lead Change",
+	names=  ["Uncertainty", "Killer Moves", "Permanence", "Lead Change",
 			"Completion", "Duration", "Final Score"]
 	colors = ["blue","red","green","purple","orange","brown","grey"]
 	alpha = 0.7
