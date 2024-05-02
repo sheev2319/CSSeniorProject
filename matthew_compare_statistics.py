@@ -12,7 +12,7 @@ FINAL_SCORE = 6
 NORMAL_CHESS = 518
 
 
-data = np.load("matthew_statistics.npz",allow_pickle=True)
+data = np.load("matthew_final.npz",allow_pickle=True)
 data = data['arr1']
 
 names=  ["Uncertainty", "Killer Moves", "Permenance", "Lead Change",
@@ -51,7 +51,7 @@ for i in range(7):
 	# print(np.std(mirror_image_diffs))
 	# print(np.mean(mirror_image_diffs)/np.mean(data[:,i]))
 	# print(np.std(mirror_image_diffs)/np.mean(data[:,i]),end = "\n\n")
-	print(f'\\textbf{{{names[i]}}}',end = ": ")
+	print(f'\\item \\textbf{{{names[i]}}}',end = ": ")
 	print(f'Diff Mean: {round(np.mean(mirror_image_diffs),4)}',end = ", ")
 	print(f'Diff Std Dev: {round(np.std(mirror_image_diffs),4)}',end = ", ")
 	print(f'Sample Mean: {round(np.mean(data[:,i]),4)}')
