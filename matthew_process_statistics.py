@@ -70,9 +70,10 @@ def completion(outcomes):
 
 def duration(evaluations):
 	game_lengths = [len(eval_co) for eval_co in evaluations]
-	return np.std(game_lengths)/np.mean(game_lengths)
-	m_pref = 120
-	return np.mean([abs(m_pref-len(eval_co))/m_pref for eval_co in evaluations])
+	# return np.std(game_lengths)/np.mean(game_lengths)
+	m_pref = np.mean(game_lengths)
+	return np.mean([abs(m_pref-length)/m_pref for length in game_lengths])
+
 
 
 def main():
